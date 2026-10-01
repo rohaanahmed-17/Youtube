@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
+    .topbar {
+        border: none;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        /* position: sticky; */
+    }
+
+    #menu {
+        padding: 0px 40px 0px 30px;
+    }
+
+    #logo {
+        padding: 0px 0px 0px 20px;
+        font-size: 40px;
+        color: red;
+        background-color: white;
+    }
+
+    h1 {
+        padding: 0px 180px 0px 0px;
+    }
+
+    sup {
+        font-size: 10px;
+    }
+
+    #search {
+        padding: 10px;
+        width: 350px;
+        height: 25px;
+    }
+
+    #mic {
+        padding: 0px 20px;
+    }
+
+    #dots {
+        padding: 0px 20px 0px 300px;
+        color: rgb(124, 120, 120);
+    }
+
+    #dots:hover {
+        color: black;
+    }
+
+    #mail {
+        text-align: center;
+        padding: 5px;
+        text-decoration: none;
+        border: solid 2px gray;
+        border-radius: 30px;
+    }
+
+    #mail:hover {
+        background-color: rgba(181, 178, 178, 0.516);
+        color: black;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        width: 82%;
+    }
+
+    .left {
+        /* border: solid; */
+        height: 90vh;
+        width: 18%;
+        overflow-y: auto;
+    }
+
+    .leftbar {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .bar {
+        text-decoration: none;
+        display: block;
+        /* border: solid gray 1px; */
+        width: 100%;
+        text-align: center;
+        /* padding: 10px; */
+        color: black;
+    }
+
+    .bar:hover {
+        background-color: rgb(193, 189, 189);
+        border-radius: 20px;
+        /* transition: 0.3s; */
+        /* color: grey; */
+    }
+
+    #log {
+        padding: 20px;
+    }
+
+    .log {
+        padding: 20px;
+    }
+
+    .navbar {
+        /* border: solid aqua; */
+        display: flex;
+        align-items: center;
+        border-top: solid 1.5px grey;
+        border-bottom: solid 1.5px grey;
+        height: 10vh;
+        width: 100%;
+        /* padding-bottom: 30px; */
+        /* overflow-x: scroll; */
+        /* overflow-y: hidden; */
+        /* padding: 20px; */
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+        /* width: 100%; */
+        /* margin: 25px; */
+        gap: 10px;
+        white-space: nowrap;
+
+    }
+
+    .nab {
+        padding: 15px;
+    }
+
+    .navi {
+        padding: 5px 10px;
+        text-decoration: none;
+        border: solid 1px;
+        border-radius: 30px;
+        font-size: small;
+        color: black;
+        background-color: rgba(205, 200, 200, 0.301);
+    }
+
+    .navi:hover {
+        background-color: black;
+        color: white;
+        transition: 0.2s;
+    }
+
+    .videos {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        width: 100%;
+        height: 80vh;
+        padding: 30px;
+    }
+
+    .video {
+        padding: 10px;
+    }
+
+    .vod {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    .channel-name {
+        font-size: 14px;
+        color: rgb(68, 66, 66);
+    }
+
+    .channel-name:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    .time {
+        font-size: 13px;
+        color: rgb(68, 66, 66);
+    }
+
+    .time:hover {
+        color: black;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="topbar">
+        <i class="fa-solid fa-bars" id="menu"></i>
+        <i class="fa-brands fa-youtube" id="logo"></i>
+        <i class="fa-solid fa-camera-web-slash"></i>
+        <h1>YouTube<sup>PK</sup></h1>
+        <input type="search" placeholder="search" id="search">
+        <i class="fa-solid fa-microphone-lines" id="mic"></i>
+        <i class="fa-solid fa-ellipsis-vertical" id="dots"></i>
+        <a href="" id="mail">Sign in</a>
+    </div>
+    <div class="main">
+        <div class="left">
+            <ul class="leftbar">
+                <li><a href="" class="bar"><i class="fa-solid fa-house log"></i> Home</a></li>
+                <li><a href="" class="bar"><i class="fa-brands fa-youtube-shorts log"></i> Shorts</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-compass log"></i> Explore</a></li>
+                <li><a href="" class="bar"><i class="fa-brands fa-square-youtube log"></i> Subscription</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-video log"></i> Library</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-clock-rotate-left log"></i> History</a></li>
+                <li><a href="" class="bar"><i class="fa-regular fa-square-caret-right log"></i> Your Videos</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-clock log"></i> Watch Later</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-thumbs-up log"></i> Liked Videos</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-music log"></i> Music</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-trophy log"></i> Sports</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-gamepad log"></i> Gaming</a></li>
+                <li><a href="" class="bar"><i class="fa-solid fa-newspaper log"></i> News</a></li>
+                <li><a href="" class="bar"><i class="fa-regular fa-sun log"></i> Memberships</a></li>
+                <li><a href="" class="bar"><i class="fa-regular fa-headphones log"></i> YouTube Music</a></li>
+                <li><a href="" class="bar"><i class="fa-brands fa-square-youtube log"></i> Try Premium</a></li>
+                <li><a href="" class="bar"><i class="fa-brands fa-youtube-shorts log"></i> YouTube Kids</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="navbar">
+                <ul class="nav">
+                    <li class="nab"><a href="#" class="navi">Live</a></li>
+                    <li class="nab"><a href="#" class="navi">Music</a></li>
+                    <!-- <li class="nab"><a href="#" class="navi">Mixes</a></li> -->
+                    <li class="nab"><a href="#" class="navi">Hollywood</a></li>
+                    <!-- <li class="nab"><a href="#" class="navi">Logos</a></li> -->
+                    <li class="nab"><a href="#" class="navi">Website</a></li>
+                    <li class="nab"><a href="#" class="navi">Live</a></li>
+                    <li class="nab"><a href="#" class="navi">News</a></li>
+                    <!-- <li class="nab"><a href="#" class="navi">Podcast</a></li> -->
+                    <li class="nab"><a href="#" class="navi">Gaming</a></li>
+                    <li class="nab"><a href="#" class="navi">Computer science</a></li>
+                    <!-- <li class="nab"><a href="#" class="navi">Graphic design</a></li> -->
+                    <!-- <li class="nab"><a href="#" class="navi">User interface design</a></li> -->
+                    <li class="nab"><a href="#" class="navi">Recently uploaded</a></li>
+                </ul>
+            </div>
+            <div class="videos">
+                <div class="video 1">
+                    <iframe src="https://www.youtube.com/embed/jqlxti9oYzw?si=FmzfZzxyc185GMXJ" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Leo Messi,The Greatest of All Time</h4>
+                    <p class="channel-name">FC Barcelona</p>
+                    <p class="time">3 years ago</p>
+                </div>
+                <div class="video 2">
+                    <iframe src="https://www.youtube.com/embed/tvcaYU7uofY?si=qtP3c4zRKibuoI6t" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Hum | Official Audio</h4>
+                    <p class="channel-name">Murtaza Qizilbash</p>
+                    <p class="time">11 months ago</p>
+                </div>
+                <div class="video 3">
+                    <iframe src="https://www.youtube.com/embed/tONNC-bWSFM?si=P1KR96Ds0LJPzFHl" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Code Minecraft with Python</h4>
+                    <p class="channel-name">Beau Carnes</p>
+                    <p class="time">4 years ago</p>
+                </div>
+                <div class="video 4">
+                    <iframe src="https://www.youtube.com/embed/0TnO1GzKWPc?si=20hummqxc7fEhBrG" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Animate on scroll</h4>
+                    <p class="channel-name">Snippets Code</p>
+                    <p class="time">2 years ago</p>
+                </div>
+                <div class="video 5">
+                    <iframe src="https://www.youtube.com/embed/-MlkASchodc?si=t-lzwbI6QX0ycpvR" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Funny scene | 3 idiots</h4>
+                    <p class="channel-name">Vidhu Vinod Chopra Films</p>
+                    <p class="time">10 years ago</p>
+                </div>
+                <div class="video 6">
+                    <iframe src="https://www.youtube.com/embed/a18py61_F_w?si=VIv7-JkHnP37LsCE" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Tajdar-e-Haram | Atif Aslam</h4>
+                    <p class="channel-name">Coke Studio Pakistan</p>
+                    <p class="time">11 years ago</p>
+                </div>
+                <div class="video 7">
+                    <iframe src="https://www.youtube.com/embed/Jg0TFzprzV0?si=gyV0pjVOsx72wiN1" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">The Day Messi Destroyed Ronaldo</h4>
+                    <p class="channel-name">Moon Ball</p>
+                    <p class="time">4 years ago</p>
+                </div>
+                <div class="video 8">
+                    <iframe src="https://www.youtube.com/embed/irVNGjRFZGk?si=HuhBr3veexaR8mG4" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Avengers: Doomsday | Official Trailer</h4>
+                    <p class="channel-name">Marvel Entertainment</p>
+                    <p class="time">2 months ago</p>
+                </div>
+                <div class="video 9">
+                    <iframe src="https://www.youtube.com/embed/eKqY-oP1d_Y?si=Afc3STRu6LnUdGlH" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">How to start coding?</h4>
+                    <p class="channel-name">Apna College</p>
+                    <p class="time">4 years ago</p>
+                </div>
+                <div class="video 10">
+                    <iframe src="https://www.youtube.com/embed/swZFmJsU54s?si=6XIImrn8FEhOOQku" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Learn CSS compinators</h4>
+                    <p class="channel-name">Bro Code</p>
+                    <p class="time">3 years ago</p>
+                </div>
+                <div class="video 11">
+                    <iframe src="https://www.youtube.com/embed/74cVT_tUpck?si=1wvL7waTcJrl30uZ" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Wohi Khuda Hai | Atif Aslam</h4>
+                    <p class="channel-name">Coke Studio Pakistan </p>
+                    <p class="time">6 years ago</p>
+                </div>
+                <div class="video 12">
+                    <iframe src="https://www.youtube.com/embed/0HyIda5eub8?si=GtrLWdiB-CYmi1FE" frameborder="0"
+                        allowfullscreen class="vod"></iframe>
+                    <h4 class="title">Learn Coding and get a Job</h4>
+                    <p class="channel-name">Code With Harry</p>
+                    <p class="time">1 years ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
